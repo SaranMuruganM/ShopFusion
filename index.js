@@ -88,24 +88,31 @@ const productsInformation = [
 ];
 
 let arr =localStorage.length ? JSON.parse(localStorage.getItem("productInfo")):[];
-let cartSize=0;
+let cartSize=arr.length;
+cartHtml.innerHTML=`(${arr.length})`
 const cart = (elementId) => {
-
-  arr.push(productsInformation[elementId - 1]);
-  localStorage.setItem("productInfo", JSON.stringify(arr));
-  cartHtml.innerHTML=`(${++cartSize})`
-  
+  if(!arr.includes(elementId)){
+    arr.push(elementId);
+    localStorage.setItem("productInfo", JSON.stringify(arr));
+    cartHtml.innerHTML=`(${arr.length})`
+  }
 };
 
+fetch("https://fakestoreapi.com/products")
+.then((data)=>data.json())
+.then((productsInformation)=>{
+  
 productsInformation.forEach((element) => {
   const product = document.createElement("div");
   product.classList.add("product");
   products.appendChild(product);
   product.innerHTML = `
-    <img src="${element.imageURL  }" alt="image">
-    <h3>${element.name}</h3>
+    <img src="${element.image}" alt="image">
+    <h3>${element.title}</h3>
     <h4>${element.description.slice(0, 60)}...</h4>
     <h4><sup>₹</sup> ${element.price}</h4>
-    <button onclick="cart(${element.id})">Add to Cart</buttton>
+    <button onclick="cart(${element.id})">Add to Cart</button>
     `;
 });
+});
+

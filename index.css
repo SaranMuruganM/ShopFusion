@@ -13,7 +13,7 @@ h3 {
   font-size: 1.1rem;
 }
 
-img {
+.products img {
   display: block;
   height: 200px;
   width: 200px;
@@ -62,14 +62,19 @@ img {
   border: 1px solid gainsboro;
   box-shadow: 2px 2px 5px gainsboro;
 }
+.product div{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  gap:10px;
+}
 
 .product button {
-  height: 30px;
-  width: 60%;
   cursor: pointer;
   border-radius: 3px;
   border: 3px solid gainsboro;
   background-color: rgb(230, 230, 226);
+  padding: 10px;
 }
 .product h4 {
   font-size: 1.4rem;
@@ -140,11 +145,9 @@ img {
     z-index: 1000;
 }
 
-.navbar .logo a {
-    color: #1d1f21;
-    text-decoration: none;
-    font-size: 28px; /* Larger font for prominence */
-    font-weight: 700;
+.navbar .logo img {
+    height: 200px;
+    width: 330px;
 }
 
 .navbar .search-bar {

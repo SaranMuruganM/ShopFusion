@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Ubuntu", sans-serif;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+img {
+  display: block;
+  height: 200px;
+  width: 200px;
+}
+
+.container {
+  padding-left: 180px;
+  padding-top: 130px;
+  height: 100vh;
+  display: grid;
+}
+
+.navbar {
+  position: fixed;
+  height: 100px;
+  inset: 0 0 0 auto;
+  min-width: 100vw;
+  background-color: black;
+}
+
+.sidebar {
+  background-color: antiquewhite;
+  position: fixed;
+  width: 200px;
+  inset: 100px auto 0 0;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  padding: 2rem;
+  gap: 10px;
+  place-items: center;
+}
+
+.product {
+  margin-bottom: 50px;
+  padding: 1.3rem;
+  display: grid;
+  grid-auto-flow: row;
+  gap: 3px;
+  width: 290px;
+  height: 460px;
+  /* grid-template-rows: min-content; */
+  place-items: center;
+  border: 1px solid gainsboro;
+  box-shadow: 2px 2px 5px gainsboro;
+}
+
+.product button {
+  height: 30px;
+  width: 60%;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 3px solid gainsboro;
+  background-color: rgb(230, 230, 226);
+}
+.product h4 {
+  font-size: 1.4rem;
+  text-align: center;
+  position: relative;
+}
+
+.product h4 sup {
+  position: absolute;
+  font-size: 0.8rem;
+  top: 3px;
+  left: -7px;
+  opacity: 0.9;
+}
+
+.product h4:first-of-type {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  text-align: center;
+}
+
+
+
+
+/* Sidebar */
+.sidebar {
+  
+    background-color: #1d1f21; /* Darker background for a modern look */
+    color: #b8b9bb; /* Softer text color */
+    height: 100vh;
+    padding-top: 30px;
+    position: fixed;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 30px;
+    transition: background 0.3s ease, padding-left 0.3s ease; /* Add hover effects */
+}
+
+.sidebar ul li a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+}
+
+.sidebar ul li:hover {
+    background-color: #26292b;
+    padding-left: 40px; /* Animate padding on hover */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #ffffff; /* Light background for contrast */
+    color: #1d1f21;
+    margin-left: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 1000;
+}
+
+.navbar .logo a {
+    color: #1d1f21;
+    text-decoration: none;
+    font-size: 28px; /* Larger font for prominence */
+    font-weight: 700;
+}
+
+.navbar .search-bar {
+    display: flex;
+    width: 40%; /* More prominent search bar */
+}
+
+.navbar .search-bar input {
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 30px 0 0 30px;
+    outline: none;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.navbar .search-bar input:focus {
+    border-color: #007BFF; /* Highlight on focus */
+}
+
+.navbar .search-bar button {
+    padding: 12px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .search-bar button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.navbar .cart a {
+    color: #1d1f21;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+
+
+@media screen and (max-width: 730px) {
+  .sidebar {
+    display: none;
+  }
+  .container {
+    place-content: center;
+    padding-left: 0%;
+  }
+}

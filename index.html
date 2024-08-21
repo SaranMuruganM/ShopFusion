@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./categories.html">Categories</a></li>
+          <li><a href="#">Best Sellers</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="navbar">
+        <div class="logo">
+          <a href="#">Shop Fusion</a>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Search products..." />
+          <button>Search</button>
+        </div>
+        <div class="cart">
+          <a href="./cart.html"
+            ><i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cart">(0)</span></a
+          >
+        </div>
+      </div>
+      <div class="products" id="products"></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

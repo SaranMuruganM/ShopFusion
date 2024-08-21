@@ -108,10 +108,12 @@ productsInformation.forEach((element) => {
   products.appendChild(product);
   product.innerHTML = `
     <img src="${element.image}" alt="image">
+    <div class="productDescription">
     <h3>${element.title}</h3>
-    <h4>${element.description.slice(0, 60)}...</h4>
+    <h4>${element.description.slice(0, 200)}...</h4>
     <h4><sup>₹</sup> ${element.price}</h4>
     <button onclick="cart(${element.id})">Add to Cart</button>
+    </div>
     `;
 });
 });

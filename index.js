@@ -96,8 +96,9 @@ const productsInformation = [
     category: "electronics",
   },
 ];
+let storedData = localStorage.getItem("productInfo");
+let arr = storedData ? JSON.parse(storedData) : [];
 
-let arr =localStorage.length ? JSON.parse(localStorage.getItem("productInfo")):[];
 cartHtml.innerHTML=`(${arr.length})`
 const cart = (elementId) => {
   if(!arr.includes(elementId)){

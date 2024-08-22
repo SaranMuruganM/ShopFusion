@@ -18,7 +18,7 @@ h3 {
 
 .products img {
   display: block;
-  align-self: center;
+  place-self: center;
   aspect-ratio: 4/4;
 
   max-width: 220px;
@@ -141,9 +141,10 @@ h3 {
 .product {
   background-color: #ffff;
   padding: 1.3rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(250px,380px));
   
-  gap: 50px;
+  gap: 20px;
   border: 1px solid gainsboro;
   box-shadow: 2px 2px 5px gainsboro;
   

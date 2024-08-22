@@ -5,8 +5,11 @@
   padding: 0%;
   box-sizing: border-box;
 }
+
+
 html {
   font-family: "Ubuntu", sans-serif;
+  max-width: 100vw;
 }
 
 h3 {
@@ -139,6 +142,7 @@ h3 {
   background-color: #ffff;
   padding: 1.3rem;
   display: flex;
+  
   gap: 50px;
   border: 1px solid gainsboro;
   box-shadow: 2px 2px 5px gainsboro;
@@ -188,7 +192,7 @@ h3 {
   }
   .products{
     margin-left: 20px;
-    margin-top: 163px;
+    margin-top: 193px;
   }
   .navbar{
     flex-wrap: wrap;

@@ -98,7 +98,6 @@ const productsInformation = [
 ];
 
 let arr =localStorage.length ? JSON.parse(localStorage.getItem("productInfo")):[];
-let cartSize=arr.length;
 cartHtml.innerHTML=`(${arr.length})`
 const cart = (elementId) => {
   if(!arr.includes(elementId)){

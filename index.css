@@ -47,8 +47,8 @@ h3 {
 
 .navbar .logo img {
   
-  height: 100px;
-  width: 200px;
+  aspect-ratio: 5/1;
+  width: 180px;
 }
 
 .navbar .search-bar {
@@ -197,7 +197,8 @@ h3 {
   }
   .navbar{
     flex-wrap: wrap;
-    height: 163px;
+    height: 130px;
+    row-gap: 10px;
   }
   .navbar .cart{
     order: 1;
